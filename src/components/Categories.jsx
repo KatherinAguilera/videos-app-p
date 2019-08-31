@@ -1,13 +1,11 @@
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
-import '../assets/styles/components/Carousel.scss';
+import '../assets/styles/components/Categories.scss';
 
-const Carousel = ({ children }) => (
-  <section className='carousel'>
-    <div className='carousel__container'>
-      {children}
-    </div>
-  </section>
+const Categories = ({ children, title }) => (
+  <div className='categories'>
+    <h3 className='categories__title'>{title}</h3>
+    {children}
+  </div>
 );
 
-export default Carousel;
+export default Categories;

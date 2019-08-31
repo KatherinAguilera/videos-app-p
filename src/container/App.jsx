@@ -4,6 +4,7 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
+import Loader from '../components/Loader';
 import Footer from '../components/Footer';
 
 import '../assets/styles/App.scss';
@@ -15,7 +16,7 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => setVideos(data));
   }, []);
-  return videos.length === 0 ? <h1>Loading...</h1> : (
+  return videos.length === 0 ? <Loader /> : (
     <div className="App">
       <Header />
       <Search />
